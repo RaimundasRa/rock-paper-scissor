@@ -69,7 +69,8 @@ section {
   font-size: 50px;
 }
 
-.hands, .options {
+.hands,
+.options {
   display: flex;
   justify-content: space-around;
   align-items: center;

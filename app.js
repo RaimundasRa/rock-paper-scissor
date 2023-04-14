@@ -9,8 +9,8 @@ const game = () => {
     const match = document.querySelector('.match');
 
     playBtn.addEventListener('click', () => {
-      introScreen.classList.add("fadeOut");
-      match.classList.add("fadeIn");
+      introScreen.classList.add('fadeOut');
+      match.classList.add('fadeIn');
     });
   };
   // play match
@@ -22,7 +22,7 @@ const game = () => {
     const computerOptions = ['rock', 'paper', 'scissors'];
 
     options.forEach(option => {
-      option.addEventListener('click', function() {
+      option.addEventListener('click', function () {
         // computer choice
         const computerNumber = Math.floor(Math.random() * 3);
         const computerChoice = computerOptions[computerNumber];
@@ -42,18 +42,18 @@ const game = () => {
     const computerScore = document.querySelector('.computer-score p');
     playerScore.textContent = pScore;
     computerScore.textContent = cScore;
-  }
+  };
 
   const compareHands = (playerChoice, computerChoice) => {
     const winner = document.querySelector('.winner');
     // we are checking for a tie
-    if(playerChoice === computerChoice) {
+    if (playerChoice === computerChoice) {
       winner.textContent = 'It is a tie.';
       return;
     }
     // checking for Rock
-    if(playerChoice === 'rock') {
-      if(computerChoice == 'scissors') {
+    if (playerChoice === 'rock') {
+      if (computerChoice == 'scissors') {
         winner.textContent = 'Player wins!';
         pScore++;
         updateScore();
@@ -66,8 +66,8 @@ const game = () => {
       }
     }
     // checking for Paper
-    if(playerChoice === 'paper') {
-      if(computerChoice == 'rock') {
+    if (playerChoice === 'paper') {
+      if (computerChoice == 'rock') {
         winner.textContent = 'Player wins!';
         pScore++;
         updateScore();
@@ -80,8 +80,8 @@ const game = () => {
       }
     }
     // checking for Scissors
-    if(playerChoice === 'scissors') {
-      if(computerChoice == 'paper') {
+    if (playerChoice === 'scissors') {
+      if (computerChoice == 'paper') {
         winner.textContent = 'Player wins!';
         pScore++;
         updateScore();
